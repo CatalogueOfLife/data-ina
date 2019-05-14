@@ -1,7 +1,7 @@
 <archive xmlns="http://rs.tdwg.org/dwc/text/" metadata="eml.xml">
   <core encoding="UTF-8" fieldsTerminatedBy="\t" linesTerminatedBy="\n" fieldsEnclosedBy="" ignoreHeaderLines="1" rowType="http://rs.tdwg.org/dwc/terms/Taxon">
     <files>
-      <location>extract_output.csv</location>
+      <location>taxon.csv</location>
     </files>
     <id index="0" />
     <field index="0" term="http://rs.tdwg.org/dwc/terms/taxonID"/>
@@ -14,5 +14,6 @@
     <field index="7" term="http://ucjeps.berkeley.edu/CPD/terms/combinations"/>
     <field index="8" term="http://rs.tdwg.org/dwc/terms/originalNameUsage"/>
     <field index="9" term="http://purl.org/dc/terms/references"/>
+    <field index="10" term="http://rs.tdwg.org/dwc/terms/originalNameUsageID"/>
   </core>
 </archive>
