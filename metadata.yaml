@@ -3,7 +3,7 @@ alias: INA
 description: | 
     The Index Nominum Algarum (INA) is a card file and online reporting system maintained at the Silva Center for Phycological Documentation of the University Herbarium, University of California, Berkeley. 
     It contains nearly 200,000 names of algae (in the broad sense). 
-		The Bibliographia Phycologica Universalis (BPU) is a card file containing bibliographic references pertaining to algal taxonomy.
+    The Bibliographia Phycologica Universalis (BPU) is a card file containing bibliographic references pertaining to algal taxonomy.
 organisations:         
   - University of California, Berkeley
 contact: Richard Moe <rlmoe@berkeley.edu>
