@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-import csv, re
+import csv, re, html
 
 idCol   = 0
 nameCol = 1
@@ -15,18 +15,16 @@ basionymCol = 10
 linkCol = 11
 
 idMatcher    = re.compile('<(\d+)>(.+)')
-asMatcher    = re.compile('^as +(.+)')
+asMatcher    = re.compile('^as +(.+)', re.IGNORECASE)
 badMatcher   = re.compile('([";<>?*]| in )')
 brackMatcher = re.compile('[\[\]]')
 brackAuthMatcher = re.compile('\[([^\[\]]+) *(\]|$)')
 
 
-
 global parsedAuthors
 
 def unescape(x):
-    # TODO: html entities
-    return x
+    return html.unescape(x)
 
 def replBracketAuthors(m):
     global parsedAuthors
@@ -54,7 +52,10 @@ def processRow(row, rank=None):
     parsedAuthors = []
     auth    = brackMatcher.sub("", unescape(row[authCol]))
     sciname = brackAuthMatcher.sub(replBracketAuthors, unescape(row[nameCol]))
-    if sciname.isupper():
+    if rank == 'genus':
+        # TODO remove lower case bits !!!
+        # potentially add to name if its got punctuation ??? v. van der
+
         # genera are all upper
         sciname = sciname.capitalize()
     remarks = unescape(row[remarksCol])
